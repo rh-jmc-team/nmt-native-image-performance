@@ -3,7 +3,7 @@
 ### Summary
 This test uses a simple custom Quarkus native app that has been rigged to allocate native memory. It measures time to first repsonse, RSS (measured upon start up), image size, and runs a hyperfoil benchmark to gather response latency data. Then it produces `report_date.txt` which summarizes the results. 
 
-In order to use this test you must first build one quarkus app with NMT and name it `getting-started-1.0.0-SNAPSHOT-runner_nmt` using `./mvnw package -Dnative -DskipTests`. Then build it again without NMT and name it `getting-started-1.0.0-SNAPSHOT-runner_no_nmt`. Unfortunately, you need to build a custom Quarkus from source or build a custom GraalVM from source to achive this because Quarkus does not accept `-Dquarkus.native.monitoring=jfr` yet. 
+In order to use this test you must first build one quarkus app with NMT and name it `getting-started-1.0.0-SNAPSHOT-runner_nmt` using `./mvnw package -Dnative -DskipTests`. Then build it again without NMT and name it `getting-started-1.0.0-SNAPSHOT-runner_no_nmt`. Unfortunately, you need to build a custom Quarkus from source or build a custom GraalVM from source to achive this because Quarkus does not accept `-Dquarkus.native.monitoring=nmt` yet. 
 
 ### Configurations Tested
 
